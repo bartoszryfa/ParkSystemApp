@@ -15,14 +15,14 @@ public class DisplayUsersRepository {
     JdbcTemplate jdbcTemplate;
 
     public List<Parking> getAll() {
-        List<Parking> displayAll = jdbcTemplate.query("SELECT id, rejestrationNumber, time FROM parking",
+        List<Parking> displayAll = jdbcTemplate.query("SELECT id, registrationNumber, time FROM parking",
                 BeanPropertyRowMapper.newInstance(Parking.class));
         return displayAll;
     }
 
 
     public Parking getById(int id) {
-        return jdbcTemplate.queryForObject("SELECT id, rejestrationNumber, time FROM parking WHERE " + "id=?",
+        return jdbcTemplate.queryForObject("SELECT id, registrationNumber, time FROM parking WHERE " + "id=?",
                 BeanPropertyRowMapper.newInstance(Parking.class), id);
     }
 }

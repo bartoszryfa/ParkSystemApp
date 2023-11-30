@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Parking {
     private int id;
-    private String rejestrationNumber;
+    private String registrationNumber;
     private LocalDateTime startTime;
 }
 

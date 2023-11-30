@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pl.bartoszryfa</groupId>
-    <artifactId>crudProject</artifactId>
+    <artifactId>parkSystemApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>crudProject</name>
     <description>move library</description>
