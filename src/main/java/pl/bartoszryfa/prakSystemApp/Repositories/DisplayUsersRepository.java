@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import pl.bartoszryfa.prakSystemApp.Parking;
+import pl.bartoszryfa.prakSystemApp.ParkingEntity;
 
 import java.util.List;
 
@@ -14,15 +14,15 @@ public class DisplayUsersRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public List<Parking> getAll() {
-        List<Parking> displayAll = jdbcTemplate.query("SELECT id, registrationNumber, time FROM parking",
-                BeanPropertyRowMapper.newInstance(Parking.class));
+    public List<ParkingEntity> getAll() {
+        List<ParkingEntity> displayAll = jdbcTemplate.query("SELECT id, registration, time FROM parking",
+                BeanPropertyRowMapper.newInstance(ParkingEntity.class));
         return displayAll;
     }
 
 
-    public Parking getById(int id) {
-        return jdbcTemplate.queryForObject("SELECT id, registrationNumber, time FROM parking WHERE " + "id=?",
-                BeanPropertyRowMapper.newInstance(Parking.class), id);
+    public ParkingEntity getById(int id) {
+        return jdbcTemplate.queryForObject("SELECT id, registration, time FROM parking WHERE " + "id=?",
+                BeanPropertyRowMapper.newInstance(ParkingEntity.class), id);
     }
 }

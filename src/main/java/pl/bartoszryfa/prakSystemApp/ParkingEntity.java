@@ -6,23 +6,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name="parking")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Parking {
+public class ParkingEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    private int id;
-    @Column(name="registrationNumber")
-    private String registrationNumber;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id") //, nullable = false, columnDefinition = "BIGINT default 0")
+    private long id;
+    @Column(name="registration")
+    private String registration;
     @Column(name="time")
-    private LocalDateTime startTime;
+    private int startTime;
 }
 
 
