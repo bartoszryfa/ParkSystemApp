@@ -31,7 +31,7 @@ Welcome to the Parkometer App, an advanced Spring Boot project showcasing expert
 
 2. **Navigate to the Project Directory**:
    ```bash
-   cd parkSystemApp
+   cd ParkSystemApp
    ```
 
 3. **Build and Run with Maven**:
@@ -48,8 +48,8 @@ Welcome to the Parkometer App, an advanced Spring Boot project showcasing expert
 Run the application as a Docker container for seamless deployment and scalability:
 
 ```bash
-docker build -t parkSystemApp .
-docker run -p 8080:8080 -t parkSystemApp
+docker build -t ParkSystemApp .
+docker run -p 8080:8080 -t ParkSystemApp
 ```
 
 ## 🛠️ Database Configuration
@@ -60,4 +60,4 @@ Configure your MySQL database connection in `src/main/resources/application.prop
 
 ## 📄 License
 
-Explore the codebase, delve into the architecture, and experience the sophistication of the Parkometer App. 
+Explore the codebase, delve into the architecture, and experience the sophistication of the ParkSyetemApp 
